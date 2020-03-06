@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use App\Movie;
 
 class MoviesTableSeeder extends Seeder
 {
@@ -11,7 +12,7 @@ class MoviesTableSeeder extends Seeder
      */
     public function run()
     {
-        Movies::createMany([
+        Movie::insert([
             [
                 "title" => "Homem de Ferro",
                 "image" => "https://m.media-amazon.com/images/M/MV5BMTczNTI2ODUwOF5BMl5BanBnXkFtZTcwMTU0NTIzMw@@._V1_UX182_CR0,0,182,268_AL_.jpg",
