@@ -1,34 +1,28 @@
-@extends('layouts.app')
+<x-app-layout>
+    <x-slot name="header">
+        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
+            {{ __('Filmes disponíveis') }}
+        </h2>
+    </x-slot>
 
-@section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-12">
-            <div class="card">
-                <div class="card-header">Filmes disponíveis</div>
-
-                <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
-                    @endif
-
-                    <div class="row justify-content-around">
-                    @foreach ($movies as $movie)
-                        <div class="card" style="width: 15rem; margin-bottom: 10px;">
-                            <img src="{{ $movie->image }}" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">{{ $movie->title}}</h5>
-                                <a href="#" class="card-link">Alugar</a>
-                                <a href="#" class="card-link">Comprar</a>
+    <div class="py-12">
+        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+            <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
+                <div class="p-6 bg-white border-b border-gray-200">
+                    <div class="flex flex-wrap justify-around">
+                        @foreach ($movies as $movie)
+                            <div class="w-60 rounded shadow-xl m-2 bg-gray-100">
+                                <img src="{{ $movie->image }}" class="h-auto w-full" alt="...">
+                                <div class="px-6 py-4">
+                                    <h5 class="font-bold text-xl mb-2">{{ $movie->title}}</h5>
+                                    <a href="#" class="py-1 font-semibold text-blue-500 mr-4">Alugar</a>
+                                    <a href="#" class="py-1 font-semibold text-blue-500 mr-4">Comprar</a>
+                                </div>
                             </div>
-                        </div>
-                    @endforeach
+                        @endforeach
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
-@endsection
+</x-app-layout>

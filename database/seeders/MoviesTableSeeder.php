@@ -3,7 +3,7 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
-use App\Movie;
+use App\Models\Movie;
 
 class MoviesTableSeeder extends Seeder
 {

@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,6 +18,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Auth::routes();
+Route::get('/home', [HomeController::class, "index"])->middleware(['auth'])->name('home');
 
-Route::get('/home', 'HomeController@index')->name('home');
+require __DIR__.'/auth.php';
