@@ -45,7 +45,7 @@ class MoviesTableSeeder extends Seeder
             ],
             [
                 "title" => "Capitão América: O Primeiro Vingador",
-                "image" => "https://m.media-amazon.com/images/M/MV5BOGE4NzU1YTAtNzA3Mi00ZTA2LTg2YmYtMDJmMThiMjlkYjg2XkEyXkFqcGdeQXVyNTgzMDMzMTg@._V1_UX182_CR0,0,182,268_AL_.jpg",
+                "image" => "http://3.bp.blogspot.com/-pnjfIZNh4vc/TjrXc1sX0AI/AAAAAAAAMVk/34y3D7ao0AM/s1600/captain_america_the_first_avenger_ver2.jpg",
                 "overview" => "Steve Rogers, um soldado militar rejeitado, se transforma no Capitão América depois de tomar uma dose de um 'soro de super-soldado'. Mas ser Capitão América tem um preço, enquanto ele tenta derrubar um traficante de guerra e uma organização terrorista.",
                 "purchase_price" => 12.99,
                 "rental_price" => 40.99
