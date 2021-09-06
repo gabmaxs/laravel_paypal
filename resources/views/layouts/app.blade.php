@@ -15,6 +15,7 @@
 
         <!-- Scripts -->
         <script src="{{ asset('js/app.js') }}" defer></script>
+        <script src="https://www.paypal.com/sdk/js?client-id=AePnO24s8xG2fLByBL5MKvcukBXazUSnlfx99o3A4vZsGjhNtuvvzjHKlb2IxW6wYyrmwxLZ4v5T1qwa&buyer-country=BR&currency=BRL&locale=pt_BR"></script>
     </head>
     <body class="font-sans antialiased">
         <div class="min-h-screen bg-gray-100">

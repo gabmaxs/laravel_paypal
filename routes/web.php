@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\MovieController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,6 +18,8 @@ use App\Http\Controllers\HomeController;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get("/movie/{movie}", [MovieController::class, "show"])->middleware(['auth'])->name("movie.show");
 
 Route::get('/home', [HomeController::class, "index"])->middleware(['auth'])->name('home');
 

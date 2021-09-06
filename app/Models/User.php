@@ -42,6 +42,6 @@ class User extends Authenticatable
     ];
 
     public function movies() {
-        $this->belongToMany("App\Movie");
+        return $this->belongsToMany("App\Models\Movie")->withPivot('acquired_in', 'expires_at');
     }
 }

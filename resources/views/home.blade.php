@@ -15,8 +15,8 @@
                                 <img src="{{ $movie->image }}" class="h-auto w-full" alt="...">
                                 <div class="px-6 py-4">
                                     <h5 class="font-bold text-xl mb-2">{{ $movie->title}}</h5>
-                                    <a href="#" class="py-1 font-semibold text-blue-500 mr-4">Alugar</a>
-                                    <a href="#" class="py-1 font-semibold text-blue-500 mr-4">Comprar</a>
+                                    <a href="{{ route('movie.show', $movie) }}" class="py-1 font-semibold text-blue-500 mr-4">Alugar</a>
+                                    <a href="{{ route('movie.show', $movie) }}" class="py-1 font-semibold text-blue-500 mr-4">Comprar</a>
                                 </div>
                             </div>
                         @endforeach

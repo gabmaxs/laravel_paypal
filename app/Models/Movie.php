@@ -11,6 +11,6 @@ class Movie extends Model
     ];
 
     public function users() {
-        $this->belongsToMany("App\User");
+        return $this->belongsToMany("App\Models\User",'movie_user');
     }
 }
